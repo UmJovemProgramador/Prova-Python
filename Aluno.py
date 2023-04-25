@@ -3,21 +3,22 @@
 
 opcao = 0
 curso = 0
+tracos = "-" * 27
   
 while opcao != 6:
 
-    print("MENU\n Digite 1 para selecionar a turma de ENGENHARIA DE COMPUTAÇÃO\n Digite 2 para selecionar a turma de SISTEMAS DE INFORMAÇÃO\n")
-    curso = int(input("Selecione o curso:\n"))
+    print(tracos,"MENU",tracos,"\n Digite 1 para selecionar a turma de ENGENHARIA DE COMPUTAÇÃO\n Digite 2 para selecionar a turma de SISTEMAS DE INFORMAÇÃO\n Digite 3 para SAIR")
+    curso = int(input("\n Selecione o curso:\n"))
 
-    if curso == 1:
+    if curso == 1: 
 
-        print("1 - Cadastrar \n")
+        print("\n1 - Cadastrar \n")
         print("2 - Consultar \n")
         print("3 - Alterar \n")
         print("4 - Remover \n")
         print("5 - Retornar \n")
 
-        opcao = int(input("Digite a opção \n"))
+        opcao = int(input("Digite a opção: \n"))
     #-----------------------------------------------------------------------------------------------------------------------
         if opcao == 1:
             arquivo = open('ENG.txt','a')
@@ -115,13 +116,13 @@ while opcao != 6:
 
 
     if curso == 2:
-        print("1 - Cadastrar \n")
+        print("\n1 - Cadastrar \n")
         print("2 - Consultar \n")
         print("3 - Alterar \n")
         print("4 - Remover \n")
         print("5 - Retornar \n")
 
-        opcao = int(input("Digite a opção \n"))
+        opcao = int(input("Digite a opção: \n"))
     #-----------------------------------------------------------------------------------------------------------------------
         if opcao == 1:
             arquivo = open('SI.txt','a')
@@ -216,6 +217,15 @@ while opcao != 6:
             input("Aperte ENTER para continuar\n")
 
     #-----------------------------------------------------------------------------------------------------------------------
-    else:
+    
+    if curso == 3:
+        print("Tchau")
+        break
+
+    elif curso > 3:
         print("Opção de curso inválida.\n") 
-        input("Digite ENTER para continuar.\n")
+        input("Aperte ENTER para continuar\n")
+    
+    elif curso < 1:
+        print("Opção de curso inválida.\n") 
+        input("Aperte ENTER para continuar\n")
